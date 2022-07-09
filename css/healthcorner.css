@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+    
+}
+
+.header{
+    height: 600px;
+    width: auto;
+    background-image: url('../img/heart.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 0 50px 0;
+    position: relative;
+    
+   
+}
+.bar{
+    margin: 5px;
+    background-color: #000000;
+    border-radius:30px ;
+    padding: 5px;
+    position: sticky;
+    top: 0px;
+    z-index: 1;  
+}
+.menubar{
+    color: #fff;
+    font-size: 35px;
+    display: none;
+}
+.menu{
+    display: inline-flex;
+}
+.search{
+    display: inline-flex;
+    background-color: #fff;
+    width: 250px;
+    height: 25px;
+    border-radius: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+li a{
+    text-decoration: none;
+    color: #fff;
+
+}
+ul li{
+    list-style: none;
+    margin: 10px;
+    text-align: center;
+    font-size: 100%;    
+}
+ul{
+    display: flex;
+}
+.search input{
+    border: none;
+    width:100% ;
+    height: 100%;
+    padding: 0 10px;
+    border-radius: 20px 0 0 20px;
+
+}
+.search span{
+    text-align: center;
+    margin: 5px;
+}
+.menu a:hover{
+    cursor: pointer;
+    text-decoration:underline ;
+    color: cyan;
+}
+.logo{
+    display: inline-block;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+.logo p{
+    display: inline-block;
+    font-size: 90px;
+    text-shadow: 0px 5px 13px;
+    letter-spacing: -8px;
+    word-spacing: 15px;
+    font-family: 'Hammersmith One', sans-serif;
+    color: white;
+    
+}
+
+.main{
+   
+    position: relative;
+   
+    padding-top: 5px;
+   
+}
+.main::after {
+    content: "";
+    background-image: url(../img/orange.jpg);
+    background-size: cover;
+
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+
+.welcome{
+    font-size: 60px;
+    width: 99%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #000;
+    border-radius: 30px;
+    font-family: 'Hammersmith One', sans-serif;
+}
+.fig1{
+ 
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+
+}
+.fig1::first-letter{
+    font-size: 40px;
+}
+.vid{
+    float: left;
+    width: 33.33%;
+ 
+ padding: 30px 30px;
+ height: 400px;
+ 
+margin-top: 20px;
+ 
+ }
+
+.video::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.vidd{
+    float: left;
+    width: 33.33%;
+ 
+ padding: 30px 30px;
+ height: 400px;
+ 
+margin-top: 20px;
+ 
+ }
+
+.videoo::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.footer{
+      padding: 20px 0;
+      background-color: rgb(214, 124, 79);
+      margin: 50px 0;
+
+  }
+.foot{
+    
+    color: white;
+    padding: 10px 40px;
+   
+}
+.bottom{
+    font-family: 'Hammersmith One', sans-serif;
+    color: white;
+    font-size: 40px;
+    border-bottom:2px solid white ;
+    text-shadow: 0px 1px 50px ;
+}
+#signup{
+    width: 22%;
+    height: 30px;
+    padding: 10px;
+}
+.foot label{
+    background-color: white;
+    margin: 0px 1px;
+    height: 34px;
+    color: black;
+    padding: 2px;
+}
+#click{
+    display: none;
+}
+#click:checked~.menubar i:before{
+    content: "\f00d";
+}
+
+#click:checked~ul{
+    right: 0%;
+    transition: all 0.3s ease;
+}
+@media (max-width:800px) {
+    ul{
+        display: block;
+        top: 60px;
+       right: -100%;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        background-color: #1b1b1b;
+        
+       
+
+    }
+    
+    .bar{
+        border-radius: 0px;
+        height: 45px;
+    }
+    .menubar{
+         display: block;
+       
+    }
+    #signup{
+        width: 100%;
+    }
+    .signup{
+        display: block;
+        text-align: center;
+        cursor: pointer;
+    }
+    .vidd{
+        height: 300px;
+    }
+    .vid{
+        height: 300px;
+    }
+}
+@media (max-width:700px) {
+    .vid,.vidd{
+        float: none;
+        width: 100%;
+    }
+
+}
+@media (max-width:350px){
+    .search {
+        width:60%;
+    }
+
+}
+
+    
+
+
+

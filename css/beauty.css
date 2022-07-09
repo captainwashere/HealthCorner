@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+    
+}
+body{
+    position: relative;
+}
+.bar{
+    margin: 5px;
+    background-color: #000000;
+    border-radius:30px ;
+    padding: 5px;
+    position: sticky;
+    top: 0px;
+    z-index: 1;  
+}
+.menu{
+    display: inline-flex;
+}
+.search{
+    display: inline-flex;
+    background-color: #fff;
+    width: 250px;
+    height: 25px;
+    border-radius: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+li a{
+    text-decoration: none;
+    color: #fff;
+
+}
+ul li{
+    list-style: none;
+    margin: 10px;
+    text-align: center;
+    font-size: 100%;    
+}
+ul{
+    display: flex;
+}
+.search input{
+    border: none;
+    width:100% ;
+    height: 100%;
+    padding: 0 10px;
+    border-radius: 20px 0 0 20px;
+
+}
+.search span{
+    text-align: center;
+    margin: 5px;
+}
+.menu a:hover{
+    cursor: pointer;
+    text-decoration:underline ;
+}
+body::after{
+    content: "";
+    background-image: url(../img/orange.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+    
+}
+.content{
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+
+.content h1{
+    font-family: Oswald, sans-serif;
+    padding: 0 0 5px 10px;
+    border-bottom: 2px solid #000;
+    color: rgb(0, 0, 0);
+    margin-top: 5px;
+    text-shadow: 1px 1px 1px;
+}
+div h2{
+    font-family: Oswald, sans-serif;
+    color: #000;
+}
+.content div p{
+    font-family: "Noto Sans", sans-serif;
+    margin: 5px 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+a{
+    text-decoration: none;
+    color: white;
+    border: 2px solid #1b1b1b;
+    border-radius:30px;
+    padding: 0 5px;
+    margin-left: 5px;
+    background-color: #1b1b1b;
+}
+
+#click{
+    display: none;
+}
+#click:checked~.menubar i:before{
+    content: "\f00d";
+}
+
+#click:checked~ul{
+    right: 0%;
+    transition: all 0.3s ease;
+}
+@media (max-width:800px) {
+    ul{
+        display: block;
+        top: 60px;
+       right: -100%;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        background-color: #1b1b1b;
+        
+       
+
+    }
+    
+    .bar{
+        border-radius: 0px;
+        height: 45px;
+    }
+    .menubar{
+         display: block;
+       
+    }
+}
+@media (max-width:350px){
+    .search {
+        width:60%;
+    }
+
+}
